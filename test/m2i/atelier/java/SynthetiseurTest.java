@@ -5,6 +5,7 @@
  */
 package m2i.atelier.java;
 
+import junit.framework.Assert;
 import m2i.atelierjava.entite.Synthetiseur;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -14,38 +15,59 @@ import static org.junit.Assert.*;
  * @author Formation
  */
 public class SynthetiseurTest {
+
     
 
-    //@Test
-    public void testAll(){
-    Synthetiseur s = new Synthetiseur();
-        System.out.println( s.isOn() );
-        s.allumageOnOff();
-        System.out.println( s.isOn() );
-        
-}
-//@Test
-public void volumeTest(){
-    Synthetiseur v = new Synthetiseur();
-    System.out.println(v.getVolume());
-    v.volumePus();
-    v.volumePus();
-    v.volumePus();
-    v.volumePus();
-    v.volumePus();
-    v.volumePus();
-    System.out.println(v.getVolume());
-}
-    
 @Test
-public void testJouerNote(){
-  Synthetiseur j = new Synthetiseur();
-   j.allumageOnOff();
-   
-  
-  
-  j.jouerNote("fa#3");
-  System.out.println();
-    
-}
+    public void testAll() {
+        Synthetiseur s = new Synthetiseur();
+
+          Assert.assertFalse( s.isOn());
+        s.allumageOnOff();
+          Assert.assertTrue( s.isOn());
+        s.allumageOnOff();
+          Assert.assertFalse( s.isOn());
+        
+        
+        
+        
+        
+    }
+@Test
+
+    public void volumeTest() {
+        Synthetiseur v = new Synthetiseur();
+           
+        
+            
+        v.volumePus();
+            
+        v.volumePus();
+            
+        v.volumePus();
+            
+        v.volumePus();
+           
+        v.volumePus();
+            
+        v.volumePus();
+            
+        v.volumePus();
+          
+        Assert.assertEquals(7, v.getVolume());
+
+    }
+
+    @Test
+    public void testJouerNote() {
+        Synthetiseur j = new Synthetiseur();
+
+            j.allumageOnOff();
+            
+            j.volumeMoins();
+            
+            j.jouerNote("fa#3");
+         
+       
+    }
 }

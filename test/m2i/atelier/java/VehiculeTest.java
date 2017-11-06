@@ -22,7 +22,7 @@ public class VehiculeTest {
        
        
        a.avancer();
-       a.afficher();
+       //a.afficher();
        
        
        
@@ -39,12 +39,7 @@ public class VehiculeTest {
      
      
      
-     s.avancer();
-     s.afficher();
-     s.avancer();
-     s.afficher();
-     s.setMonte(true);
-     s.avancer();
+     
      s.afficher();
  }
 

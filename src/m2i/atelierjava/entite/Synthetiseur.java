@@ -40,44 +40,33 @@ public class Synthetiseur {
     }
 
     public void allumageOnOff() {
-    if(on==false) {
-       on=true;
-       instrument = "piano";
-       volume = 5;
-    } else {
-    on = false;
+        if (on == false) {
+            on = true;
+            instrument = "piano";
+            volume = 9;
+        } else {
+            on = false;
+        }
     }
+
+    public void volumePus() {
+
+        if (volume < 10) {
+            volume = volume + 1;
+        }
     }
-    
-public void volumePus(){ 
-        
-        if(volume<10)
-           volume = volume+1;       
-     } 
-    
-     public void volumeMoins(){
-         
-        if(volume>0)
-            volume = volume-1;         
-     } 
-     
-     public void jouerNote(String note){
-         
-         
-         System.out.println(note + " " + instrument + " " + volume + " " + on);
-         
-             
-         }
-         
-             
-     }  
 
- 
-            
-            
-            
-        
-    
-    
+    public void volumeMoins() {
 
- 
+        if (volume > 0) {
+            volume = volume - 1;
+        }
+    }
+
+    public void jouerNote(String note) {
+
+        System.out.println(note + " " + instrument + " " + volume + " " + on);
+
+    }
+
+}

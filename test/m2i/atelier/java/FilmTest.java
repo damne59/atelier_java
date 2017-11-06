@@ -30,7 +30,9 @@ public class FilmTest {
     f1.initialise("dracula", "bla bla", 2001, new Date());
     f1.affiche();
     
-     Film f2 = new Film();
+     
+            
+            Film f2 = new Film();
 //     f2.setTitre("kung fu panda");
 //     f2.setAnneeDeProduction(2010);
        f2.initialise("kung fu panda", "bla bla", 2010, new Date());
